@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Study Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <style>
+    .font{
+      font-family: 'Comic Neue', cursive;
+  font-family: 'Sedgwick Ave', cursive;
+  }
+  .myNavbar{
+      
+      background-color: brown;
+  }
+  .myTextColor{
+  
+      color: white;
+  }
+  .myBtn{
+      background-color: brown;
+      color: white;
+      border: 0ch;   
+  }
+  
+  .myBtn:hover{
+      background-color: brown;
+      color: white;
+      border: 0ch;   
+  }
+  
+  .myJ{
+      background-color: whitesmoke;
+  }
+  .myError{
+      color: brown;
+  }
+  .ud{
+      margin-top: 25px;
+  }
+  .btn-outline-danger:hover{
+      background-color: brown;
+  }
+  </style>
+  <body>
+
+
+
+
+    <div class='container mt-4'>
+      <h1 class='font'>Sign Up</h1> 
+      
+      <form action="" class='mt-4' method="POST" novalidate>{% csrf_token %}
+        <div class='mt-5 mx-5'>
+      {%for fm in form%}
+      <pre class='form-label'>{{fm.label_tag}}</pre>{{fm}} {{fm.errors|striptags}}<br> <br>    
+      {%endfor%}
+      </div>
+      
+      <input type="submit" class='btn myBtn mx-5' value="Sign Up"> 
+      </form>
+    
+      <div class="border-top pt-3 mt-3 mx-5 mb-2">
+        <small class="text-muted">Already have an account?
+          <a class="ml-2" href="{%url 'login'%}">Sign In</a>
+        </small>
+      </div>    
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

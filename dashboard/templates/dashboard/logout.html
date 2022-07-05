@@ -1,0 +1,10 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<div class="border-top pt-3 text-center">
+  <h2 class='text-center'>You are logged Out !</h2>
+
+  <small class="text-muted text-center"
+    ><a class="btn btn-danger mx-1" href="{%url 'login'%}">LogIn Again</a>
+  </small>
+</div>
+{% endblock content %}
